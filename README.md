@@ -1,1 +1,2 @@
-# platform-stack-cli
+# `stack` CLI
+Airbus UTM Platform `stack` CLI
