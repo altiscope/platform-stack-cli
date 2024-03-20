@@ -5,17 +5,7 @@ Airbus UTM Platform `stack` CLI
 
 ### macOS/Linux one-liner 
 ```
-curl -sSL https://github.com/altiscope/platform-stack-cli/releases/download/v1.19.0/stack_$(
-    bash -c '[[ $OSTYPE == darwin* ]] && echo darwin || echo linux'
-  )_amd64 -o stack && chmod a+x stack && sudo mv stack /usr/local/bin/
-```
-
-### macOS
-```
-curl -sSL https://github.com/altiscope/platform-stack-cli/releases/download/v1.19.0/stack_darwin_amd64 -o stack && chmod a+x stack && sudo mv stack /usr/local/bin/
-```
-
-### Linux
-```
-curl -sSL https://github.com/altiscope/platform-stack-cli/releases/download/v1.19.0/stack_linux_amd64 -o stack && chmod a+x stack && sudo mv stack /usr/local/bin/
+curl -sSL https://github.com/altiscope/platform-stack-cli/releases/download/v1.19.4/stack_$(
+  bash -c '[[ $OSTYPE == darwin* ]] && (uname -m | grep -q arm && echo darwin_arm64 || echo darwin_amd64) || (uname -m | grep -q x86_64 && echo linux_amd64 || echo linux_arm64)'
+) -o stack && chmod +x stack && sudo mv stack /usr/local/bin/
 ```
